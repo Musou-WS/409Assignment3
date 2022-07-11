@@ -1,7 +1,7 @@
 import qiskit
 
 def blackBox(x):
-	return x
+	return 0
 
 qr = qiskit.QuantumRegister(2) # call two quantum bits (or qubits)
 cr = qiskit.ClassicalRegister(1) # call a clasical bit
@@ -14,7 +14,7 @@ program.h(qr[1])
 program.barrier()
 
 # apply oracle function
-funcX = blackBox(qr[1])
+# funcX = blackBox(qr[1])
 program.cx(qr[0], qr[1])
 program.barrier()
 
