@@ -1,9 +1,13 @@
 import qiskit
 
-def constant():
+def constant1():
+	return
+def constant2():
 	program.x(qr[0])
+	return
 def balanced():
 	program.cx(qr[0], qr[1])
+	return
 
 qr = qiskit.QuantumRegister(2) # call two quantum bits (or qubits)
 cr = qiskit.ClassicalRegister(1) # call a clasical bit
@@ -17,7 +21,7 @@ program.barrier()
 
 # apply oracle function
 # funcX = blackBox(qr[1])
-balanced()
+constant()
 program.barrier()
 
 # apply hadamard gate to qubit0
